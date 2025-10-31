@@ -35,8 +35,8 @@ export default function App() {
     form.append('image', blob, 'upload.png')
     form.append('params', new Blob([JSON.stringify(params)], { type: 'application/json' }))
 
-    const endpoint = mode === 'recolor' ? '/api/recolor' : '/api/paint'
-    const res = await fetch(endpoint, { method: 'POST', body: form })
+    const API_BASE = import.meta.env.VITE_API_BASE || '';
+    const endpoint = `${API_BASE}/api/${mode === 'recolor' ? 'recolor' : 'paint'}`;
     if (!res.ok) {
       const txt = await res.text().catch(() => '(no body)');
       alert(`Backend error: ${res.status} ${res.statusText}\n${txt}`);

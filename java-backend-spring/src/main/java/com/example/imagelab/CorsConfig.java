@@ -38,6 +38,8 @@ public class CorsConfig {
     cfg.setAllowCredentials(true);
     cfg.addAllowedOriginPattern("http://localhost:*");
     cfg.addAllowedOriginPattern("http://127.0.0.1:*");
+    cfg.addAllowedOriginPattern("https://*.onrender.com");
+    cfg.addAllowedOriginPattern("https://your-frontend.onrender.com");
     cfg.addAllowedHeader("*");
     cfg.addExposedHeader("*");
     cfg.addAllowedMethod("*"); // includes OPTIONS
