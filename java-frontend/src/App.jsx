@@ -37,6 +37,7 @@ export default function App() {
 
     const API_BASE = import.meta.env.VITE_API_BASE || '';
     const endpoint = `${API_BASE}/api/${mode === 'recolor' ? 'recolor' : 'paint'}`;
+    const res = await fetch(endpoint, { method: 'POST', body: form });
     if (!res.ok) {
       const txt = await res.text().catch(() => '(no body)');
       alert(`Backend error: ${res.status} ${res.statusText}\n${txt}`);
