@@ -1,0 +1,7 @@
+com/example/imagelab/RFController.class
+com/example/imagelab/ImagelabApplication.class
+com/example/imagelab/RFService.class
+com/example/imagelab/HealthController.class
+com/example/imagelab/RFParams.class
+com/example/imagelab/CorsConfig.class
+com/example/imagelab/algo/RegionFinder.class
